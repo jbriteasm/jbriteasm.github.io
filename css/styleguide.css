@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@300;400;700&display=swap');
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+.sourceserif {
+    font-family: 'Source Serif Pro', serif;
+}
+.font-lg {
+    font-size: 48px;
+}
+html {
+    height: 100%;
+}
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-size: 16px;
+    font-size: 1rem;
+}
+.guide-col-left {
+    position: fixed;
+    z-index: 2;
+    overflow: auto;
+    width: 18rem;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+.guide-col-header {
+    position: relative;
+    background: #F6F5F2;
+}
+[role=main] {
+    display: block;
+    flex: 1 0 auto;
+    padding: 1rem;
+}
+.guide-col-left-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 1rem;
+}
+.guide-col-right {
+    background: #ffffff;
+    display: flex;
+    height: 100vh;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-left: 18rem;
+}
+.guide-col-right-container {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+.guide-col-left-inner > ul {
+    margin: 0;
+    padding: 0;
+}
+.guide-col-left-inner li {
+    list-style: none;
+}
+.guide-col-left-inner > ul > li > ul {
+    padding-left: 30px;
+}
+.guide-col-left-inner a {
+    color: #000;
+    padding: 10px 0;
+    display: block;
+}
+.guide-col-left-inner a.active {
+    font-weight: bold;
+    color: #B7132A;
+}
+
+/* Typography */
+h1 {
+    font-size: 32px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+h2 {
+    font-size: 28px;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+h3 {
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+h4 {
+    font-size: 21px;
+    font-size: 1.3125rem;
+    font-weight: 600;
+}
+h5 {
+    font-size: 18px;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+h6 {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.65em 2em;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    display: inline-flex;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: #f0f0f0;
+    background-color: #b7132a;
+    border-radius: 0.25rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    outline: 0;
+    transition: all .15s ease-in-out;
+}
+.btn:hover {
+    color: #f0f0f0;
+    background-color: #a51126;
+    text-decoration: none;
+}
+
+.btn-secondary,
+.btn-secondary:hover {
+    transition: all .15s linear;
+    transition-property: color,background,border,outline,box-shadow;
+    color: #fff;
+    background: #000;
+    border-color: #fff;
+}
+.btn-secondary.btn--inverse {
+    transition: all .15s linear;
+    transition-property: color,background,border,outline,box-shadow;
+    color: #333;
+    background: #fff;
+    border-color: #d9d9d9;
+}
+.btn-secondary.btn--inverse:hover {
+    color: #333;
+    background: #f2f2f2;
+    border-color: #d9d9d9;
+    text-decoration: none;
+}
+.btn--inverse,
+.btn--inverse:hover {
+    color: #b7132a;
+    background-color: #000;
+    background-color: transparent;
+    border: 1px solid #b7132a;
+}
+.btn--transparent.btn,
+.btn--transparent.btn:hover {
+    background-color: transparent;
+}
+
+/* Cards */
+.card-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.card-link:hover {
+    background: rgba(0, 0, 0, .1);
+}
+
+xmp {
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+    white-space: pre-line;
+}
+
+/* Expandable table */
+.table-scroll {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin: auto;
+    overflow: auto;
+}
+
+.table-scroll table {
+    width: 100%;
+    min-width: 1280px;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table-wrap {
+    position: relative;
+}
+
+th:first-child {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: #FFF;
+}
+
+.table-secondary {
+    background-color: #d6d8db !important;
+}
+
+.table-primary {
+    background-color: #b8daff !important;
+}
+
+#expand .table-btn {
+    display: none;
+}
+
+#expand:target .pub-fees {
+    background: rgba(0, 0, 0, .8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100000;
+    padding: 30px;
+    overflow: scroll;
+}
+
+#expand:target .table-btn {
+    display: inline-block;
+}
+
+#expand:target .table-footer {
+    background: white;
+    padding: 20px;
+}
+
+.pub-fees table {
+    font-size: 14px;
+    background: #FFF;
+}
+
+.table-tools {
+    text-align: right;
+    margin-bottom: 10px;
+}
